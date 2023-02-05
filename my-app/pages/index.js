@@ -239,27 +239,27 @@ export default function Home() {
           </button>
         </div>
       );
-    } else {
-      return (
-        <div style={{ display: "flex-col" }}>
-          <div>
-            <input
-              type="number"
-              placeholder="Amount of Tokens"
-              onChange={(e) => setTokenAmount(BigNumber.from(e.target.value))}
-              className={styles.input}
-            />
-          </div>
-          <button
-            className={styles.button}
-            disabled={!(tokenAmount > 0)}
-            onClick={() => mintCryptoDevToken(tokenAmount)}
-          >
-            Mint Tokens
-          </button>
-        </div>
-      );
     }
+
+    return (
+      <div style={{ display: "flex-col" }}>
+        <div>
+          <input
+            type="number"
+            placeholder="Amount of Tokens"
+            onChange={(e) => setTokenAmount(BigNumber.from(e.target.value))}
+            className={styles.input}
+          />
+        </div>
+        <button
+          className={styles.button}
+          disabled={!(tokenAmount > 0)}
+          onClick={() => mintCryptoDevToken(tokenAmount)}
+        >
+          Mint Tokens
+        </button>
+      </div>
+    );
   };
 
   return (
