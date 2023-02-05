@@ -172,6 +172,7 @@ export default function Home() {
       await getOwner();
     } catch (error) {
       console.error(error);
+      window.alert(err.reason);
     }
   };
 
