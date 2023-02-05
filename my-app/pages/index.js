@@ -50,7 +50,7 @@ export default function Home() {
 
         for (let i = 0; i < balance; i++) {
           const tokenId = await nftContract.tokenOfOwnerByIndex(address, i);
-          const claimed = await tokenContract.tokeIdesClaimed(tokenId);
+          const claimed = await tokenContract.tokenIdsClaimed(tokenId);
           if (!claimed) {
             amount++;
           }
